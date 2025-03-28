@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>=H KING VPN =H</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+
+            --bs-dark-rgb: 33,37,41;
+            --bs-bg-opacity: 1;
+            /*Editar o modal*/
+            --btn-modal: #0000003f;
+            --btn-border: 0px solid #fff;
+            --btn-modal-border: 50px;
+            --modal-shadow: rgba(0, 0, 0, 0.5);
+            --modal-bg: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+            --modal-icon: #fff;
+            --config-color: #0000003f;
+            --category-color: #0000003f;
+            --text-color: #ffffff; 
+
+            /*Editar Layout*/
+            --fundo: #ffffff;
+            --topo: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;;
+            --icon: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;;            
+            --icon-bg: #E5EAFC;
+            --config: #F7F7FC;
+            --box-border: 1px solid #C0C6DE;
+            --box-bg: transparent;
+            --box-typing: #C0C6DE;
+            --box-icon: #C0C6DE;
+            --info1: #C0C6DE;
+            --info2: #4071FF;
+            
+        }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--fundo);
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*background: var(--topo);*/
+    width: 100vw;
+    padding: 0 auto;
+
+}
+
+button.power-icon {
+    font-size: 5.5em;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 0px 2px 0px #333;
+    box-shadow: 0 20px 25px 0px #4071ff54, 0 2px 0px 0px #4071ff10;*/
+}
+
+.app-bg-gray-1 {
+    background: var(--config);
+}
+
+.app-bg-gray-2 {
+    background: var(--icon-bg);
+}
+
+.app-bg-gray-3 {
+    background: #fff;
+  }
+  
+  .app-bg-4 {
+    background-color: #ed2939;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+    /*box-shadow: 0 0px 2px 0px #333;
+  	background: linear-gradient(-45deg, #ed2939, #ed2939, #ed2939, #ed2939);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;*/
+  }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.app-bg-blue {
+    background: none;
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.app-color-blue {
+    color: #ed2939;
+    
+}
+
+.app-color-gray-1 {
+    color: #C0C6DE;
+}
+
+.app-rounded {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+	.status {
+    font-size: 1em;
+    }
+    
+    .put {
+    	border-radius: 60px;
+    }
+    
+    .icon {
+    	font-size: 0.8em;
+        color: var(--box-icon);
+    }
+
+    input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--box-typing) !important;
+            line-height: 1;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .box {
+            border: var(--box-border);
+            background: var(--box-bg);
+        }
+
+.tool {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tool-bt {
+    background: var(--btn-modal);
+    height: 50px;
+    width: 150px;
+    border: var(--btn-border);
+}
+
+.info {
+color: var(--info2);
+}
+
+.info1 {
+color: var(--info1);
+}
+
+ .info2 {
+color: var(--modal-icon);
+}
+
+ .info3 {
+font-size: 1.2em;
+    color: var(--icon);
+}
+
+.modal {
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            border: none;
+            background: var(--modal-bg);
+            box-shadow: 0 5px 10px var(--modal-shadow);
+            color: var(--text-color);
+        }
+
+        .modal-dialog {
+            padding: 0 0.5rem;
+        }
+
+        .bg-category {
+            background: var(--category-color);
+        }
+
+        .bg-config {
+            background: var(--config-color);
+        }
+        .bg-dark {
+            background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+        }
+     
+        .btn{
+            width: 150px;
+            background-color: #171e2e;
+            outline: none;
+            height: 49px;
+            border-radius: var(--btn-modal-border);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: 0.5s;
+            border: var(--btn-border);
+        }
+        .itens {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1px 3px;
+            font-size: 24px;
+        }
+        .itens span {
+            font-size: 10px;
+            margin-top: -2px;
+        }
+
+        .left-icon {
+            position: relative;
+            left: -3%;
+        }
+        .right-icon {
+            position: relative;
+            right: -3.3%;
+        }
+        .box-shadow {
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .renovar {
+            width: 100%;
+  background-color: initial;
+  padding: 5px 20px;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+    bottom: 6%;
+
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+.iconn {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+    color: #888888;
+    font-size: 15px;
+    margin: 0;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #888888;
+  margin-top: 5px;
+}
+
+.right-content {
+  text-align: right;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #fff;
+  margin-right: 24px;
+}
+.space-evenly {
+    justify-content: space-evenly;
+  }
+
+        
+
+</style>
+</head>
+<body class="h-screen bg-dark">
+    
+        <div class="container flex flex-row justify-between items-center px-6 pt-12">
+            <button class="left-icon place-items-center text-white justify-start" onclick="ToolsModal.show()"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"/></svg></button>
+            <h1 id="sitename" style="display:none; font-size: 25px;font-weight: 600; color: #fff;text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);">SSH4G VPN</h1>
+            <button class="right-icon place-items-center text-white" onclick="loggerModal.show()"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><g><rect fill="none" height="24" width="24"/><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M13,17H8c-0.55,0-1-0.45-1-1 c0-0.55,0.45-1,1-1h5c0.55,0,1,0.45,1,1C14,16.55,13.55,17,13,17z M16,13H8c-0.55,0-1-0.45-1-1c0-0.55,0.45-1,1-1h8 c0.55,0,1,0.45,1,1C17,12.55,16.55,13,16,13z M16,9H8C7.45,9,7,8.55,7,8c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1 C17,8.55,16.55,9,16,9z"/></g></svg></button>
+
+        </div>
+          
+        <div class="flex flex-row items-center justify-center pt-3">
+            <div class="w-56 h-44 mt-4 mb-2 rounded-full items-center justify-center flex">
+                    <button id="power" class="fa-solid fa-power-off bg-dark app-color-blue rounded-full p-10 power-icon" onclick="startStopVpn()"></button>
+            </div>
+        </div>
+
+            
+        <div class="flex flex-col">
+
+
+
+            <div class="flex flex-row justify-center items-center">
+                <button class="btn btn-sm text-white bg-dark font-semibold" onclick="InstrucoesModal.show()" id="" style="box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);height: 30px ;"><i class="text-warning fa-solid fa-warning"></i> Instruções</button>
+            </div>
+            
+            
+                            
+            <div class="box d-flex gap-2 justify-content-center mb-1 mt-1 flex flex-row items-center px-6 py-2 mx-6 rounded-xl app-bg-gray-1 border-0 box-shadow">
+                <i class="icon fa fa-cogs"></i>
+                <input type="text" placeholder="CONFIG." readonly id="config">
+                <i class="icon fa fa-angle-double-down"></i>
+            </div>       
+
+            <div class="box d-flex gap-2 justify-content-center mb-2 mt-1 items-center px-6 py-1.5 mx-6 rounded-xl border-slate-150 border-0 box-shadow">
+                <i class="icon fa fa-user"></i>
+                <input type="text" placeholder="Login" id="username" style="padding-right: 98px;" autocapitalize="none" autocomplete="off">
+                <span id="badge-renovar" onclick="DtStartWebViewActivity.execute('https://t.me/donoking')" class="badge" style="background-color: #41484f;position: absolute;right: 30px;color: white;padding: 3px 8px;border-radius: 8px;display: flex; align-items: center"><svg class="mr-1" width="18" height="18" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#FA8C00" d="M1.526 10.769h11.218v2.603H1.526z"/><path fill="#FF8C00" d="M1.377 8.705L7.016.061l5.741 8.644z"/><path fill="#EDA500" d="M12.674 10.104l1.313-7.634L2.822 9.802z"/><path fill="#FEC400" d="M1.335 10.058L.075 2.433l10.428 7.625z"/></g></svg>Renovar</span>
+                <span id="badge-renovar" onclick="DtStartWebViewActivity.execute('https://painelssh.mtxcore.shop/')" class="badge" style="background-color: #41484f;position: absolute;right: 30px;color: white;padding: 3px 8px;border-radius: 8px;display: flex; align-items: center"><svg class="mr-1" width="18" height="18" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#FA8C00" d="M1.526 10.769h11.218v2.603H1.526z"/><path fill="#FF8C00" d="M1.377 8.705L7.016.061l5.741 8.644z"/><path fill="#EDA500" d="M12.674 10.104l1.313-7.634L2.822 9.802z"/><path fill="#FEC400" d="M1.335 10.058L.075 2.433l10.428 7.625z"/></g></svg>Renovar</span>
+            </div>       
+
+            <div class="box d-flex gap-2 justify-content-center items-center px-6 py-1.5 mx-6 rounded-xl border-slate-150 border-0 box-shadow">
+                <i class="icon fa fa-lock"></i>
+                <input type="password" placeholder="Senha" id="password" autocapitalize="none" autocomplete="off">
+                <i class="icon fa fa-eye" onclick="password.type==`text`?password.type = `password`:password.type = `text`"></i>
+            </div>
+                
+            <div class="d-flex gap-2 justify-content-center mb-2 mt-1 flex flex-row items-center px-6 py-2 mx-6 rounded-xl border-slate-150 border-2">
+                <i class="icon fa fa-lock"></i>
+                <input type="text" placeholder="V2ray UUID" id="uuid">
+                <i class="icon fa fa-eye" onclick="uuid.type==`text`?uuid.type = `password`:uuid.type = `text`"></i>        
+            </div>
+
+
+            <a id="renovar" style="display: none;" class="renovar mt-3 mb-2" onclick="DtStartWebViewActivity.execute('https://t.me/donoking)">
+                <div class="content">
+                    <div class="left-content">
+                        <div class="iconn"><svg width="25" height="25" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#FA8C00" d="M1.526 10.769h11.218v2.603H1.526z"/><path fill="#FF8C00" d="M1.377 8.705L7.016.061l5.741 8.644z"/><path fill="#EDA500" d="M12.674 10.104l1.313-7.634L2.822 9.802z"/><path fill="#FEC400" d="M1.335 10.058L.075 2.433l10.428 7.625z"/></g></svg></div>
+                        <div class="text-content">
+                        <h2 class="title" style="font-weight: 500;">Comprar novo loginSsh</h2>
+                        </div>
+                    </div>
+                    <div class="right-content">
+                        <div class="arrow">→</div>
+                    </div>
+                </div>
+            </a>
+                
+                <div class="flex flex-row items-center justify-center mt-2">
+                <i class="info1 fa-solid fa-rss app-color-gray-1 mr-2"></i>
+                <span class="info1 font-semibold text-xs mr-0" id="name">REDE</span>
+                <span class="info1 font-semibold text-xs" id="ip">127.0.0.1</span>
+                </div>
+
+            <div class="py-2 flex flex-row justify-center items-center">
+                <span class="status app-color-blue font-semibold" id="state">DESCONECTADO</span>
+            </div>
+                <!--<div class="flex flex-row items-center justify-center mt-1">
+                	<i class="info1 fa-solid fa-user app-color-gray-1 mr-2"></i>
+                	<span class="info font-semibold text-xs" id="total">00</span>
+            </div>-->
+
+
+            
+
+            <div class="flex flex-row items-center space-evenly mt-2">
+                <button class="itens place-items-center p-2 text-white" onclick="DtStartAppUpdate.execute()"><i class="bi bi-arrow-repeat"></i><span>Atualizar</span></button>
+
+                    <button class="itens place-items-center p-2 text-white" onclick="DtStartCheckUser.execute()"><i class="bi bi-calendar-check"></i><span>Validade</span></button>
+                    <!--<button class="itens place-items-center p-2 text-white" data-bs-target="#speedTestModal" data-bs-toggle="modal"><i class="bi bi-speedometer"></i><span>SpeedTest</span></button>-->
+                    <button id="suporte" class="itens place-items-center p-2 text-white" onclick="DtStartWebViewActivity.execute('https://wa.link/68ryw0')"><i class="bi bi-whatsapp"></i><span>Suporte</span></button>
+
+            </div>          
+
+            <div id="bonus" class="mt-2 items-center justify-center">
+                <span class="d-flex justify-content-center info1 font-semibold text-xs mt-2" id="name">MATRIXNET 2020 - 2025</span>
+                <div class="mt-1 box d-flex gap-2 justify-content-center mb-1 mt-1 flex flex-row items-center px-6 py-1 mx-6 rounded-xl app-bg-gray-1 border-0 box-shadow" style="background: #ffffff21;">
+                <i class="icon fa fa-gift"></i>
+                <input type="text" readonly="" id="output" value="https://t.me/donoking/?ref=seu_usuario">
+            </div>
+            <script>
+                // Seleciona o input do usuário e o input de URL
+                // const usernameInput = document.getElementById('username');
+                // const configInput = document.getElementById('output');
+            
+                // // Função para atualizar o campo readonly com o valor digitado
+                // function updateConfig() {
+                //     configInput.value = `https://t.me/donoking/?ref=${usernameInput.value}`;
+                // }
+            
+                // Atualiza o campo readonly ao carregar a página
+                // window.onload = function() {
+                //     updateConfig();
+                // };
+            
+                // Adiciona um evento para atualizar o campo readonly conforme o usuário digita
+                // usernameInput.addEventListener('input', updateConfig);
+            </script>
+            
+            <a id="renovar" style="display: none;" class="renovar mt-4" onclick="DtStartWebViewActivity.execute('https://t.me/donoking/#ssh-premium')">
+                <div class="content">
+                    <div class="left-content">
+                        <div class="iconn"><svg width="30" height="30" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#FA8C00" d="M1.526 10.769h11.218v2.603H1.526z"/><path fill="#FF8C00" d="M1.377 8.705L7.016.061l5.741 8.644z"/><path fill="#EDA500" d="M12.674 10.104l1.313-7.634L2.822 9.802z"/><path fill="#FEC400" d="M1.335 10.058L.075 2.433l10.428 7.625z"/></g></svg></div>
+                        <div class="text-content">
+                        <h2 class="title">Comprar Acesso Premium</h2>
+                        <p class="subtitle">VIP</p>
+                        </div>
+                    </div>
+                    <div class="right-content">
+                        <div class="arrow">→</div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+          
+
+
+    </div>
+    <div class="modal fade" id="configModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-3 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h1 class="modal-title fs-5" style="color: var(--text-color);">CONFIGURAÇÔES</h1>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-1 text-center">
+                    <div class="input-group items-center pl-2 pr-2">
+                        <input type="text" class="form-control" id="search-input" placeholder="Pesquisar configurações" aria-label="Pesquisar configurações" aria-describedby="search-button">
+                        <button class="btn btn-outline-secondary text-white" type="button" id="search-button">Pesquisar</button>
+                    </div>
+
+                    <div id="enviarpayload" class="flex flex-row justify-center items-center">
+                        <button class="btn btn-sm w-100 text-white font-semibold"  onclick="DtStartWebViewActivity.execute('https://t.me/donoking.')"><small>Quer sua payload no APP? Envie-nos</small></button>
+                    </div>
+                    <ul class="list-group bg-transparent overflow-y-auto config-body" style="max-height: 600px;"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript para a pesquisa -->
+<script>
+    function searchConfigurations() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('search-input');
+        filter = input.value.toUpperCase();
+        ul = document.querySelector('.config-body');
+        li = ul.getElementsByTagName('li');
+
+        for (i = 0; i < li.length; i++) {
+            a = li[i];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+
+    document.getElementById('search-button').addEventListener('click', searchConfigurations);
+    document.getElementById('search-input').addEventListener('input', searchConfigurations);
+</script>
+    <div class="modal fade" id="loggerModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-3 shadow">
+                <div class="modal-body p-1 text-center">
+                    <ul class="list-group bg-transparent overflow-y-auto logger-content" style="max-height: 600px;">
+                    </ul>
+                </div>
+                <div class="modal-footer flex-nowrap p-0">
+                    <button class="btn btn-primary w-100 clear-logger" style="background-color:var(--btn-modal);">LIMPAR</button>
+                      <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" style="background-color: var(--btn-modal);">FECHAR</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tool webm modal fade" index="-1" id="InstrucoesModal">
+        <div class="pt-4 modal-dialog modal-dialog-centered" role="document">
+                     
+ 
+        <div class="modal-content">
+        <div class="tool modal-header">
+            <h5 class="modal-title" style="color:#ffffff;">INSTRUÇÕES</h5>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+    
+        </div>
+            <div class="modal-body">
+                <p>
+                    Requisitos para usar nosso aplicativo<br><br><hr><br>
+
+                    <b>VIVO PRÉ</b> - MAIORIA dos DDDs, qualquer plano<br><br>
+
+                    <b>Método WSEC</b>: Esse método funciona pra todos.<br>
+                    <small><font color="red">OBS:</font> Demora uns segundos pra responder, caso não gere dados ou não conecte, instale o APP VIVO PONTOS na playstore, assista alguns anúncios para ganhar 50mb. Após acabar os mb tente conectar o app novamente. <br><br><hr><br>
+
+                    <b>VIVO EASY PRIME</b> - Necessário pagar os R$33,00 do plano todo mês e não deixar o saldo expirar.<br>
+                    <small>OBS: Pode funcionar no Easy normal.</small><br><br><hr><br>
+
+                    <b>VIVO CONTROLE</b> - Necessário manter o plano em dia para funcionar melhor.<br>
+
+                    <small>OBS: Com créditos expirados pode ser que não funcione.</small> <br><br><hr><br>
+
+                    <b>TIM PRÉ</b> - Com saldo válido (pelo menos 10 centavos de saldo).<br>Em alguns casos funciona com créditos expirados<br><br><hr><br>
+
+                    <!--<small>OBS: Com créditos expirados pode ser que não funcione.</small> <br><br>-->
+
+                    <b>CLARO</b> - Precisa Plano Flex, Controle ou Pós.<br>
+
+                    <small>OBS: Necessário manter o plano em dia para funcionar.</small><br><br><hr><br>
+
+                </p>
+            </div>
+        <!--<div class="tool modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: var(--btn-modal);">FECHAR</button>
+            
+        </div>--> 
+        </div>
+    </div>
+    </div>
+
+    <div class="tool webm modal fade" index="-1" id="ToolsModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+                     
+ 
+    <div class="modal-content">
+      <div class="tool modal-header">
+        <h5 class="modal-title" style="color:#ffffff;">FERRAMENTAS</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+ 
+      </div>
+        <div class="modal-body">
+        <button class="tool-bt rounded-2xl text-white" onclick="toggleHotSpot()"><i class="info2 bi bi-wifi mr-2"></i>HotSpot</button>
+        </div>
+        <div class="modal-body">
+        <button class="tool-bt rounded-2xl text-white" onclick="DtStartApnActivity.execute()"><i class="info2 bi bi-wifi mr-2"></i>APN</button>
+        </div>
+        <div class="modal-body">
+        <button class="tool-bt rounded-2xl text-white" onclick="DtIgnoreBatteryOptimizations.execute()"><i class="info2 bi bi-battery-full mr-2"></i>Bateria</button>
+      </div>
+      <div class="modal-body">
+        <button class="tool-bt rounded-2xl text-white" onclick="DtCleanApp.execute()"><i class="info2 bi bi-trash3 mr-2"></i>Limpar</button>
+        </div>
+      <!--<div class="tool modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: var(--btn-modal);">FECHAR</button>
+        
+      </div>--> 
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="checkUserModal" index="1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content rounded-3 shadow">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h1 class="modal-title fs-5 chk-title text-light"></h1>
+                <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="fs-5 mb-0 chk-message text-light"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="md modal fade" id="speedTestModal">
+    <div class="md modal-dialog modal-dialog-centered" role="document">
+        <div class="md modal-content rounded-3 shadow">
+            <div class="md modal-header border-bottom-0 py-3">
+                <button class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                    
+            </div>
+            <div class="modal-body ratio rounded-bottom-3" style="height: 600px;">
+                <div class="spinner d-flex w-100 h-100 align-items-center justify-content-center">
+                    <div class="spinner-border text-light p-5" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <iframe class="rounded-bottom-3" id="speedFrame"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Função para verificar o log e ocultar o elemento #renovar, se necessãrio
+    function verificarLog() {
+        const log = window?.DtGetLogs?.execute();
+        if (log && log.includes("SSH4G VPN PRO")) {
+            // A string "SSH4G VPN PRO" está presente no log, não oculte o elemento #renovar
+            document.querySelector('#renovar').style.display = 'block';
+            document.querySelector('#sitename').style.display = 'block';
+            document.querySelector('#badge-renovar').style.display = 'flex';
+            document.querySelector('#suportessh4g').style.display = 'inherit';
+            document.querySelector('#enviarpayload').style.display = 'block';
+            document.querySelector('#bonus').style.display = 'block';
+
+
+        } else {
+            // A string "SSH4G VPN PRO" não está presente no log, oculte o elemento #renovar
+            document.querySelector('#renovar').style.display = 'none';
+            document.querySelector('#sitename').style.display = 'none';
+            document.querySelector('#badge-renovar').style.display = 'none';
+            document.querySelector('#suportessh4g').style.display = 'none';
+            document.querySelector('#enviarpayload').style.display = 'none';
+            document.querySelector('#bonus').style.display = 'none';
+
+        }
+    }
+
+    // Chame a função quando a página for carregada e sempre que o log for atualizado
+    document.addEventListener('DOMContentLoaded', verificarLog);
+    window.addEventListener('logAtualizado', verificarLog);
+</script>
+    // <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    <script>
+        Object.defineProperty(String.prototype, 't', {
+            value: function t() {
+                return window?.DtTranslateText?.execute('' + this) ?? '' + this
+            },
+            writable: true,
+            configurable: true,
+        })
+
+        const config = document.querySelector('#config')
+        config.parentElement.onclick = () => showConfigsModal();
+
+        const username = document.querySelector('#username')
+        username.oninput = e => DtUsername.set(e.target.value)
+
+        const password = document.querySelector('#password')
+        password.oninput = e => DtPassword.set(e.target.value)
+
+        const uuid = document.querySelector('#uuid')
+        uuid.oninput = e => DtUuid.set(e.target.value)
+
+        const clearLogger = document.querySelector('.clear-logger')
+
+        const checkUserModal = new bootstrap.Modal(document.querySelector('#checkUserModal'))
+        const configModal = new bootstrap.Modal(document.querySelector('#configModal'))
+        const loggerModal = new bootstrap.Modal(document.querySelector('#loggerModal'))
+        const ToolsModal = new bootstrap.Modal(document.querySelector('#ToolsModal'))
+        const InstrucoesModal = new bootstrap.Modal(document.querySelector('#InstrucoesModal'))
+        const speedTestModal = new bootstrap.Modal(document.querySelector('#speedTestModal'))
+
+        const toggleHotSpot = () => {
+            const hotSpotStatus = window?.DtGetStatusHotSpotService?.execute() ?? 'STOPPED';
+            hotSpotStatus == 'RUNNING' ? stopHotSpot() : startHotSpot();
+        }
+        const startHotSpot = () => DtStartHotSpotService.execute();
+        const stopHotSpot = () => DtStopHotSpotService.execute();
+        
+
+        const dtConfigClickListener = () => {
+            const data = JSON.parse(window?.DtGetDefaultConfig?.execute() || `{ "auth": {"username": ""} }`)
+            const isV2ray = data?.mode?.toLowerCase()?.startsWith('v2ray');
+
+            config.placeholder = data.name ?? 'Escolha um servidor';
+            username.parentElement.style.setProperty('display', !data?.auth?.username && !isV2ray ? 'flex' : 'none', 'important')
+            password.parentElement.style.setProperty('display', !data?.auth?.password && !isV2ray ? 'flex' : 'none', 'important')
+            uuid.parentElement.style.setProperty('display', !data?.auth?.v2ray_uuid && isV2ray ? 'flex' : 'none', 'important')
+        }
+
+        const startStopVpn = e => {
+            if (DtGetVpnState.execute() != 'DISCONNECTED') {
+                DtExecuteVpnStop.execute()
+            } else {
+                DtExecuteVpnStart.execute()
+            }
+        }
+
+        clearLogger.addEventListener('click', () => DtClearLogs.execute())
+
+        speedTestModal._element.addEventListener('shown.bs.modal', () => {
+            const iframe = document.querySelector('#speedFrame');
+            if (!iframe.src) {
+                iframe.src = 'http://speedtest.sercomtel.com.br/'
+                iframe.addEventListener('load', () => {
+                    mp3Modal._element.querySelector('.spinner').classList.add('d-none')
+                })
+            }
+        })
+        speedTestModal._element.addEventListener('hide.bs.modal', () => {
+            const iframe = document.querySelector('#speedFrame');
+            iframe.src = '';
+        })
+
+        
+
+
+        const dtVpnStateListener = state => {
+            const isRunning = state != 'DISCONNECTED';
+            const status = document.querySelector('#state')
+            const vpnButton = document.querySelector('#power');
+            const vpnButtonBG = document.querySelector('#power-bg');
+
+
+            status.innerHTML = ('LBL_STATE_' + state).t()
+
+        /*const renovar = document.querySelector('#renovar');
+            if (state !== 'CONNECTED') {
+                renovar.style.display = 'none';
+            }*/
+
+            if (isRunning) {
+                if (state === 'CONNECTED') {
+                    status.style.color = '#00ff15'; // Define a cor do texto como verde apenas quando conectado
+                    vpnButton.style.color = '#00ff15';
+                    vpnButtonBG.style.backgroundColor = '#00ff15';
+                } else {
+                    status.style.color = 'orange'; // Remove a cor definida para voltar ao padrão
+                    vpnButton.style.color = 'orange';
+                    vpnButtonBG.style.backgroundColor = 'orange';
+                }
+                username.setAttribute('readonly', 'true')
+                password.setAttribute('readonly', 'true')
+            } else {
+                username.removeAttribute('readonly')
+                password.removeAttribute('readonly')
+                status.style.color = '#ed2939'
+                vpnButton.style.color = '#ed2939';
+                vpnButtonBG.style.backgroundColor = '#ed2939';
+
+            }
+        }
+
+        const dtCheckUserStartedListener = () => {
+            const data = JSON.parse(window?.DtGetDefaultConfig?.execute() || `{}`)
+            const isV2ray = data?.mode?.toLowerCase()?.startsWith('v2ray');
+            if (isV2ray || !data.urlCheckUser) return;
+
+            const html = `
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border p-4" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            `
+
+            checkUserModal._element.querySelector('.chk-title').textContent = 'CHECK USER'
+            checkUserModal._element.querySelector('.chk-message').innerHTML = html;
+            checkUserModal.show()
+        }
+
+        const dtCheckUserModelListener = model => {
+            const data = JSON.parse(model ?? `{"username": "test"}`)
+            const html = `
+                <div class="d-flex flex-column text-white">
+                    <span>=dNome de usuario: ${data.username}</span>
+                    <span>=�Expira em: ${data.expiration_date}</span>
+                    <span>=�Dias restantes: ${data.expiration_days}</span>
+                    <span>=�Conexoes: ${data.count_connections}|${data.limit_connections}</span>
+                </div>
+            `
+
+            checkUserModal._element.querySelector('.chk-title').textContent = ''
+            checkUserModal._element.querySelector('.chk-message').innerHTML = html;
+            checkUserModal.show()
+        }
+
+        const showConfigsModal = () => {
+            const mock = '[{"sorter":6,"color":"#6D08041C","name":"CONFIG","id":1393,"items":[{"mode":"V2RAY - VLESS","sorter":4,"tlsVersion":"TLSv1.2","name":"CONFIG 01","icon":"https://cdn-icons-png.flaticon.com/512/8187/8187143.png","id":11803,"status":"ACTIVE"},{"mode":"SSH_DIRECT","sorter":2,"tlsVersion":"TLSv1.2","name":"CONFIG 02","icon":"https://cdn-icons-png.flaticon.com/512/8187/8187143.png","id":28627,"status":"ACTIVE"},{"mode":"OVPN_PROXY","sorter":23,"tlsVersion":"TLSv1.2","name":"CONFIG 03","icon":"https://cdn-icons-png.flaticon.com/512/8187/8187143.png","id":30001,"status":"ACTIVE"}]},{"sorter":2,"color":"#6D08041C","name":"CONFIG 2","id":1846,"items":[{"mode":"SSH_PROXY","sorter":1,"tlsVersion":"TLSv1.2","name":"CONFIG 01","icon":"https://cdn-icons-png.flaticon.com/512/8187/8187143.png","id":26295,"status":"ACTIVE"}]},{"sorter":4,"color":"#80000000","name":"CONFIG 3","id":3310,"items":[{"mode":"SSH_PROXY","sorter":1,"tlsVersion":"TLSv1.2","name":"CONFIG. TEST","icon":"https://cdn-icons-png.flaticon.com/512/8187/8187143.png","id":29997,"status":"ACTIVE"},{"mode":"OVPN_PROXY","sorter":1,"tlsVersion":"TLSv1.2","name":"CONFIG. TEST 2","icon":"https://cdn-icons-png.flaticon.com/512/8187/8187143.png","id":29998,"status":"ACTIVE"}]}]'
+            const data = JSON.parse(window?.DtGetConfigs?.execute() || mock)
+
+            data.sort((a, b) => a.sorter - b.sorter)
+            data.forEach(item => item.items.sort((a, b) => a.sorter - b.sorter))
+
+            const body = configModal._element.querySelector('.config-body')
+            body.innerHTML = ''
+
+            data.forEach(category => {
+                const categoryElement = document.createElement('li')
+                categoryElement.className = 'list-group-item bg-transparent border-0 mb-1 rounded-1 px-1'
+                categoryElement.style.color = 'var(--text-color)'
+                categoryElement.innerHTML = `<span class="fw-bold w-100 d-block p-1 rounded-1 mb-1 bg-category">${category.name}</span>`
+
+                const configUlElement = document.createElement('ul')
+                configUlElement.className = 'list-group overflow-y-auto'
+
+                category.items.forEach(item => {
+                    const configElement = document.createElement('li')
+                    configElement.className = 'list-group-item d-flex border-0 bg-config rounded-2 px-1 py-2 mb-1'
+                    configElement.style.color = 'var(--text-color)'
+                    configElement.innerHTML = `
+                            <img src="${item.icon}" width="40" height="40">
+                            <div class="text-start d-flex flex-column ms-2 w-100 text-truncate">
+                                <span class="fw-bold text-uppercase" style="font-size: 0.8rem;">${item.name}</span>
+                                <span class="fst-italic fw-bold text-uppercase" style="font-size: 0.7rem;">${item.description || ''}</span>
+                            </div>
+                            <!--<div class="d-flex flex-column ms-2">
+                                <span class="fst-italic fw-bold text-end text-uppercase text-nowrap" style="font-size: 0.8rem;">${item.mode}</span>
+                            </div>-->
+                        </li>
+                    `
+                    configElement.addEventListener('click', e => {
+                        window?.DtSetConfig?.execute(item.id)
+                        configModal.hide()
+                    })
+                    configUlElement.appendChild(configElement)
+                })
+
+                categoryElement.appendChild(configUlElement)
+                body.appendChild(categoryElement)
+            })
+            configModal.show()
+        }
+
+        const dtOnNewLogListener = () => {
+            const mock = [];
+            for (let i = 0; i < 30; i++) {
+                mock.push({ 'TIME': 'MESSAGE ' + i })
+            }
+
+            const log = window?.DtGetLogs?.execute() || JSON.stringify(mock)
+            const data = JSON.parse(log)
+
+            let content = '';
+            data.forEach(item => {
+                content += '<li class="list-group-item bg-transparent p-0 border-0 text-start ms-2 text-wrap" style="font-size: 12px; color: var(--text-color);">';
+                content += Object.keys(item)[0] + " " + item[Object.keys(item)]
+                content += '</li>';
+            })
+
+            loggerModal._element.querySelector('.logger-content').innerHTML = content;
+            const listGroup = loggerModal._element.querySelector('.list-group')
+            listGroup.scrollTo(0, listGroup.scrollHeight)
+        }
+
+        username.value = window?.DtUsername?.get() ?? ''
+        password.value = window?.DtPassword?.get() ?? ''
+        uuid.value = window?.DtUuid?.get() ?? ''
+
+        dtOnNewLogListener()
+        dtConfigClickListener()
+        dtVpnStateListener(window?.DtGetVpnState?.execute() ?? 'DISCONNECTED')
+        
+    </script>
+    
+        <script>
+        const config = JSON.parse(DtGetAppConfig.execute());
+        const urlCheckUser = new URL(config.urlCheckUser);
+        urlCheckUser.protocol = 'http:';
+
+        const createConnection = () => new WebSocket(urlCheckUser);
+        const startActions = socket => {
+            socket.send(JSON.stringify({
+                action: 'all',
+                data: {}
+            }));
+        }
+        const parseResponseData = data => {
+            data = JSON.parse(data);
+            console.log(data)
+
+            if (data.total != undefined) {
+                const total = data.total;
+                document.getElementById('total').innerHTML = String(total).padStart(2, '0');
+            }
+        }
+
+        const startSocket = () => {
+            const socket = createConnection();
+            socket.onopen = e => startActions(socket);
+            socket.onmessage = e => parseResponseData(e.data);
+        }
+
+        const setVpnState = state => {
+            if (state == 'CONNECTED') startSocket();
+        }
+        startSocket();
+    </script>
+     <script>
+        class AndroidMock {
+            static getLocalIP() {
+                return '192.168.0.1';
+            }
+    
+            static getConfig() {
+                return JSON.stringify({
+                    urlCheckUser: 'http://sv-br.ssh4g.xyz:5000'
+                });
+            }
+    
+            static getNetworkName() {
+                return 'REDE';
+            }
+    
+            static openRadioInfo() {
+                console.log('openRadioInfo');
+            }
+        }
+    </script>
+    
+    <script>
+        function showLocalIP(android) {
+            console.log(android.getNetworkName());
+            document.getElementById('name').innerHTML = ' ' + android.getNetworkName() + ':';
+            document.getElementById('ip').innerHTML = android.getLocalIP();
+    
+            setInterval(() => {
+                document.getElementById('name').innerHTML =
+                    ' ' + android.getNetworkName() + ':';
+                document.getElementById('ip').innerHTML = android.getLocalIP();
+            }, 2000)
+        }
+    
+        function showCheckUser(android) {
+            const config = JSON.parse(window?.DtGetDefaultConfig?.execute() ?? android.getConfig());
+    
+            const urlCheckUser = new URL(config.urlCheckUser);
+            urlCheckUser.protocol = 'ws:';
+            const socket = new WebSocket(urlCheckUser);
+            socket.onopen = function (e) {
+                socket.send(JSON.stringify({
+                    action: 'all',
+                    data: {}
+                }));
+            };
+    
+            socket.onmessage = function (event) {
+                const data = JSON.parse(event.data);
+                if (data.total === undefined)
+                    return;
+    
+                const total = data.total;
+                document.getElementById('total').innerHTML = ' ' + String(total).padStart(2, '0');
+                socket.close();
+            };
+        }
+    
+        const usernameInput = document.getElementById('username');
+        const configInput = document.getElementById('output');
+    
+        // Função para atualizar o campo readonly com o valor digitado
+        function updateConfig() {
+            configInput.value = ``;
+        }
+    
+    
+        window.onload = function () {
+            const android = window.Android || AndroidMock;
+            showLocalIP(android);
+            showCheckUser(android);
+            updateConfig();
+        };
+        usernameInput.addEventListener('input', updateConfig);
+        document.addEventListener('DOMContentLoaded', updateConfig);
+
+    
+    </script>
+</body>
+</html>
